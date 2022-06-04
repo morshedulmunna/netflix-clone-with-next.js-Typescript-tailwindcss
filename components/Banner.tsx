@@ -20,7 +20,7 @@ const Banner = ({ netflixOriginals }: Props) => {
   }, [netflixOriginals]);
 
   return (
-    <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[70vh] lg:justify-end lg:pb-12 px-6 md:px-12 lg:px-16">
+    <div className="flex flex-col space-y-2 py-16 md:space-y-4 lg:h-[70vh] lg:justify-end lg:pb-12 px-6">
       <div className="absolute top-0 left-0 -z-10 h-[95vh] w-screen">
         <Image
           layout="fill"
@@ -36,19 +36,19 @@ const Banner = ({ netflixOriginals }: Props) => {
         {movie?.overview}
       </p>
       <div className="flex space-x-3">
-        <button className="flex items-center w-[100px] justify-center rounded-lg text-black bg-white bannerButton">
+        <button className="text-black bg-white bannerButton">
           <FaPlay className="w-4 h-4 pr-2 text-black md:h-7 md:w-7" />
           Play
         </button>
 
         <button
-          className="bannerButton bg-[gray]/70"
+          className="bg-gray-600 bannerButton"
           //   onClick={() => {
           //     setCurrentMovie(movie)
           //     setShowModal(true)
           //   }}
         >
-          <InformationCircleIcon className="w-5 h-5 md:h-8 md:w-8 lg:w-28" />{" "}
+          <InformationCircleIcon className="w-5 h-5 md:h-8 md:w-8 " />
           More Info
         </button>
       </div>

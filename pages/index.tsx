@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import Row from "../components/Row";
 import { Movie } from "../tepings";
 import requests from "../utils/requests";
 
@@ -29,17 +30,23 @@ const Home = ({
   return (
     <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511]">
       <Head>
-        <title>Create Next App</title>
+        <title>Netflix-World top Movie </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main>
         <Banner netflixOriginals={netflixOriginals} />
         <section>
-          {/* row*/}
-          {/* row*/}
-          {/* row*/}
-          {/* row*/}
+          <Row title="Trending Now" movies={trendingNow} />
+          <Row title="Top Rated" movies={topRated} />
+          <Row title="Action Thrillers" movies={actionMovies} />
+          {/* My List */}
+          {/* {list.length > 0 && <Row title="My List" movies={list} />} */}
+
+          <Row title="Comedies" movies={comedyMovies} />
+          <Row title="Scary Movies" movies={horrorMovies} />
+          <Row title="Romance Movies" movies={romanceMovies} />
+          <Row title="Documentaries" movies={documentaries} />
         </section>
       </main>
       {/* Modal */}
